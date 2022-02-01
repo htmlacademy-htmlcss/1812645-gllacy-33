@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [lmarch 🚀](https://up.htmlacademy.ru/htmlcss/33/user/1812645).
-* Наставник: [✨ Магомед Кандаев ✨](https://htmlacademy.ru/profile/magomedkandaev).
+* Наставник: [🔥 Алексей Удод ](https://htmlacademy.ru/profile/id523387).
 
 ---
 
