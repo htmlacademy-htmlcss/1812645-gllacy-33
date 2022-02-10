@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+
+  background-color: #FEAFC3;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #2D3440;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 32px;
+
+  background-color: #FCFCFC;
+  border: 4px solid rgb(255, 203, 216);
+  border-radius: 26px;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.red-button {
+  color: #FCFCFC;
+
+  background-color: #FF2F64;
+  border: 4px solid rgb(254, 175, 195);
+}
+
+.additional-button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #2D3440;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 32px;
+
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 20px;
+}
+
+.basket-button {
+  width: 32px;
+  height: 32px;
+  background: #FF2F64;
+  border: none;
+  border-radius: 26px;
+  padding: 8px;
+}
+
+.heading-two {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  color: #2D3440;
+}
+
+.heading-three {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #2D3440;
+}
+
+.heading-four {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #2D3440;
+}
+
+.text-three-bold {
+  font-weight: 700;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.signature {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.signature-two {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+}
+
+.without-underscores {
+  text-decoration: none;
+}
+
+.with-underscores {
+  text-decoration: underline;
+}
+
+.navigation-link {
+  line-height: 20px;
+  color: #2D3440;
+  text-decoration: none;
+}
+
+.navigation-link-phone {
+  font-weight: 700;
+  color: #2D3440;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-description {
+  font-size: 14px;
+  text-align: center;
+}
+
+.slideshow-title {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 46px;
+  color: #2D3440;
+}
+
+.slideshow-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #2D3440;
+}
+
+.banners-text {
+  color: #2D3440;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+.store {
+  background-color: #E2C49BFF;
+  background-image: url("../images/waffle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.store-list {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.recipe {
+  background-color: #ffffff;
+  background-image: url("../images/recipe-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.new-recipes {
+  line-height: 20px;
+}
+
+.subscribe {
+  background-color: #ffffff;
+  background-image: url("../images/mail-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.subscribe-to-news {
+  background-color: #FCFCFC;
+  border-radius: 16px;
+  margin: 8px;
+}
+
+.delivery {
+  background-color: #ffffff;
+  background-image: url("../images/delivery-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.delivery-form {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  margin: 8px;
+}
+
+.contacts {
+  background-color: #ffffff;
+  background-image: url("../images/contacts-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.contacts-address {
+  font-style: normal;
+
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+}
+
+
