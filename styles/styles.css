@@ -32,13 +32,21 @@ body {
   line-height: 22px;
   color: #565C66;
 
-  display: flex;
-  flex-direction: column;
-
   min-height: 100%;
   margin: 0;
 
   background-color: #FEAFC3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 button {
@@ -79,12 +87,26 @@ button {
   border-radius: 20px;
 }
 
+.menu-button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2D3440;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 16px;
+
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 26px;
+}
+
 .basket-button {
   width: 32px;
   height: 32px;
   padding: 8px;
 
-  background-color: #FF2F64;
+  background-color: #FFCBD8;
   border: none;
   border-radius: 26px;
 }
@@ -110,6 +132,12 @@ button {
   color: #2D3440;
 }
 
+.text-three {
+  font-weight: 400;
+  line-height: 20px;
+  color: #2D3440;
+}
+
 .text-three-bold {
   font-weight: 700;
   line-height: 20px;
@@ -119,11 +147,13 @@ button {
 .signature {
   font-size: 14px;
   line-height: 20px;
+  color: #2D3440;
 }
 
 .signature-two {
   font-size: 12px;
   line-height: 16px;
+  color: #2D3440;
 }
 
 .bold {
@@ -148,6 +178,13 @@ button {
   list-style: none;
 }
 
+.picture_container {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Pages */
+/* Home page */
 .page-header {
   width: 1170px;
   margin: 0 auto;
@@ -163,34 +200,46 @@ button {
 }
 
 .navigation-shop {
-  display: flex;
-  justify-content: space-between;
-
-  width: 553px;
+  display: grid;
+  grid-template-columns: 137px 1fr;
+  column-gap: 16px;
+  align-items: center;
 
   outline: 2px solid rgba(7, 7, 7, 0.5);
 }
 
-.navigation-user {
-  max-width: 419px;
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 450px;
+
+  outline: 2px solid rgba(7, 7, 7, 0.5);
+}
+
+.navigation-item {
+  outline: 2px solid rgba(7, 7, 7, 0.5);
 }
 
 .navigation-link {
-  line-height: 20px;
-  color: #2D3440;
+  display: block;
   text-decoration: none;
+}
+
+.navigation-shop .shop {
+  padding: 32px 8px;
 }
 
 .navigation-link-phone {
-  font-weight: 700;
-  color: #2D3440;
   text-align: center;
   text-decoration: none;
 }
 
-.navigation-description {
-  font-size: 14px;
-  text-align: center;
+.navigation-link-icon {
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .main-container {
@@ -231,6 +280,8 @@ button {
   color: #2D3440;
 
   max-width: 470px;
+  margin-top: 0;
+  margin-bottom: 24px;
 
   outline: 2px solid rgba(179, 18, 179, 0.5);
 }
@@ -241,6 +292,7 @@ button {
   color: #2D3440;
 
   max-width: 414px;
+  margin: 0 0 48px;
 
   outline: 2px solid rgba(179, 18, 179, 0.5);
 }
@@ -284,6 +336,7 @@ button {
 .banners-title {
   width: 443px;
 
+
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
 
@@ -315,7 +368,16 @@ button {
 
 .products {
   width: 1170px;
-  margin: 0 auto 40px;
+  margin: 0 auto 80px;
+
+  outline: 2px solid rgba(13, 12, 12, 0.5);
+}
+
+.products-title {
+  width: 527px;
+
+  margin-top: 0;
+  margin-bottom: 107px;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
@@ -328,8 +390,6 @@ button {
 
 .product-item {
   width: 270px;
-  min-height: 281px;
-  margin-bottom: 40px;
 
   background-color: #FCFCFC;
   border-radius: 8px;
@@ -337,9 +397,16 @@ button {
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
 
+.product-list .main-page {
+  margin-bottom: 0;
+}
+
+.product-list .catalog {
+  margin-top: 91px;
+}
+
 .product-img {
   display: block;
-
   margin: 0 auto;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
@@ -369,32 +436,36 @@ button {
 }
 
 .store-shop {
-  padding: 24px;
+  padding: 56px 40px;
 
   background-color: #FCFCFC;
   border-radius: 16px;
 
-  outline: 2px solid rgba(13, 12, 12, 0.5);
+  outline: 2px solid rgba(231, 14, 14, 0.5);
+}
+
+.store-title {
+  margin: 0 0 56px;
 }
 
 .store-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  padding: 5px;
-
-  outline: 2px solid rgba(13, 12, 12, 0.5);
+  outline: 2px solid rgba(234, 13, 13, 0.5);
 }
 
 .store-item {
-  padding-left: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
 
 .store-description {
   width: 442px;
-  padding: 0 17px;
+  padding: 0 15px;
 }
 
 .info {
@@ -408,7 +479,8 @@ button {
 }
 
 .recipe {
-  width: 506px;
+  width: 570px;
+  box-sizing: border-box;
   padding: 32px;
 
   background-color: #ffffff;
@@ -419,11 +491,19 @@ button {
 }
 
 .new-recipes {
+  margin: 0;
   line-height: 20px;
 }
 
+.recipe-title {
+  width: 304px;
+
+  margin: 12px 0 0 0;
+}
+
 .subscribe {
-  width: 564px;
+  width: 570px;
+  box-sizing: border-box;
   margin: 0;
   padding: 6px;
 
@@ -446,7 +526,14 @@ button {
 }
 
 .subscribe-description {
-  padding-bottom: 42px;
+  margin: 0;
+}
+
+.subscribe-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 42px;
 }
 
 .delivery {
@@ -469,11 +556,20 @@ button {
   padding-bottom: 163px;
 }
 
+.delivery-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
 .delivery-text {
   width: 371px;
+  margin: 0;
 }
 
 .delivery-subscription {
+  min-width: 500px;
+  box-sizing: border-box;
+
   margin-top: 64px;
   margin-right: 64px;
   margin-bottom: 64px;
@@ -486,24 +582,44 @@ button {
   outline: 2px solid rgba(147, 241, 7, 0.5);
 }
 
-.subscribe-date-tel {
-  display: flex;
-  justify-content: space-between;
+.delivery-form-text {
+  margin: 0;
+}
 
-  outline: 2px solid rgba(10, 10, 10, 0.5);
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 420px;
+  flex-grow: 1;
+
+  margin-top: 32px;
+}
+
+.subscribe-date-tel {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 16px;
+
+  outline: 2px solid rgba(15, 237, 52, 0.5);
+}
+
+.subscribe-data {
+  display: flex;
+  flex-direction: column;
+
+  outline: 2px solid rgba(237, 181, 29, 0.5);
 }
 
 .subscribe-address {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   margin-bottom: 32px;
 
   outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
-.del {
+.subscribe-button {
   text-align: center;
 
   outline: 2px solid rgba(10, 10, 10, 0.5);
@@ -524,7 +640,8 @@ button {
 }
 
 .contacts-wrapper {
-  width: 303px;
+  width: 343px;
+  box-sizing: border-box;
 
   background-color: #FCFCFC;
   border-radius: 8px;
@@ -541,6 +658,18 @@ button {
   flex-direction: column;
 }
 
+.address-description {
+  margin-bottom: 12px;
+}
+
+.address-text {
+  margin-bottom: 24px;
+}
+
+.contacts-button {
+  margin-top: 32px;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -548,40 +677,60 @@ button {
 
   width: 1170px;
   margin: 0 auto;
-  padding: 48px 0;
 
   outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
-.footer-social-list {
+.social-list {
   display: flex;
-  justify-content: space-between;
-
-  max-width: 104px;
+  flex-wrap: wrap;
 }
 
-.footer-social-item {
-  margin-right: 16px;
+.social-item:not(:last-child) {
+  padding-right: 16px;
 }
 
-.footer-suppliers-list {
+.footer-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
-  width: 356px;
+  width: 360px;
 }
+
+.footer-academy {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-right: 14px;
+}
+
+.footer-academy-logo {
+  margin-bottom: 14px;
+}
+
+/* Страничка каталога */
 
 .breadcrumbs {
   display: flex;
+  justify-content: flex-start;
 
-  width: 250px;
-  padding-top: 32px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 
   outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
-.catalog-form {
-  margin: 0 auto 80px;
+.breadcrumbs-item {
+  padding-right: 8px;
+}
+
+.catalog-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.filter-form {
+  margin: 0 auto;
+  padding-bottom: 8px;
 
   outline: 2px solid rgb(255, 255, 255);
 }
@@ -589,6 +738,8 @@ button {
 .catalog-filter {
   display: flex;
   justify-content: flex-start;
+
+  margin-bottom: 16px;
 
   outline: 2px solid rgba(150, 241, 15, 0.5);
 }
@@ -599,11 +750,16 @@ button {
   outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
+.products-catalog {
+  margin: 0 auto;
+}
+
 .catalog-wrapper {
   display: flex;
   justify-content: flex-end;
+  margin: 57px auto 81px;
 
-  outline: 2px solid rgba(10, 10, 10, 0.5);
+  outline: 4px solid rgba(230, 206, 30, 0.5);
 }
 
 .catalog-pagination {
