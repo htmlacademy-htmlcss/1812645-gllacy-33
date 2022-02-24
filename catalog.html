@@ -11,58 +11,79 @@
     <nav class="navigation">
       <div class="navigation-shop">
         <a class="navigation-link">
-          <img class="navigation-link-logo" src="images/logo.svg" width="137" height="56" alt="Логотип Глейси">
+          <img class="picture_container" src="images/logo.svg" width="137" height="56" alt="Логотип Глейси">
         </a>
-        <ul class="navigation-shop zeroing-out-list">
+        <ul class="navigation-list zeroing-out-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог</a>
+            <a class="navigation-link shop" href="catalog.html">
+              <span class="text-three">Каталог</span>
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="delivery.html">Доставка и оплата</a>
+            <a class="navigation-link  shop" href="delivery.html">
+              <span class="text-three">Доставка и оплата</span>
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="about.html">О компании</a>
+            <a class="navigation-link shop" href="about.html">
+              <span class="text-three">О компании</span>
+            </a>
           </li>
         </ul>
       </div>
 
-      <div class="navigation-shop navigation-user">
-        <a class="navigation-link-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-        <a class="navigation-link" href="#">
+      <div class="navigation-list">
+        <a class="navigation-link-phone" href="tel:+78005558628">
+          <span class="text-three-bold">+7 800 555-86-28</span>
+        </a>
+        <a class="menu-button" href="#">
           <img class="navigation-link-icon" src="images/icons/search-black.svg" width="16" height="16" alt="Поиск">
+          <span class="visually-hidden">Поиск</span>
         </a>
-        <a class="navigation-link" href="#">
+        <a class="menu-button" href="#">
           <img class="navigation-link-icon" src="images/icons/log-in.svg" width="16" height="16" alt="Регистрация, авторизация">
-          <span class="navigation-description">Вход</span>
+          <span class="signature">Вход</span>
         </a>
-        <a class="navigation-link" href="#">
-          <img class="navigation-link-icon" src="images/icons/cart-with-product.svg" width="17" height="16" alt="Корзина">
-          <span class="navigation-description">2 товара</span>
+        <a class="menu-button" href="#">
+          <img class="navigation-link-icon" src="images/icons/cart-black.svg" width="17" height="16" alt="Корзина">
+          <span class="signature">Пусто</span>
         </a>
       </div>
     </nav>
   </header>
 
     <main class="main-catalog main-container">
-      <h1 class="visually-hidden" hidden>Каталог мороженого магазина Глейси</h1>
+      <h1 class="visually-hidden">Каталог мороженого магазина Глейси</h1>
       <header>
-        <h2 class="visually-hidden" hidden>Хлебные крошки</h2>
-        <ul class="breadcrumbs zeroing-out-list">
-          <li class="signature bold with-underscores">
-            <a class="navigation-link" href="index.html">Главная</a>
+        <h2 class="visually-hidden">Хлебные крошки</h2>
+        <ul class="breadcrumbs list zeroing-out-list">
+          <li class="breadcrumbs-item">
+            <a class="link" href="index.html">
+              <span class="signature bold with-underscores">Главная</span>
+            </a>
           </li>
-          <li class="signature bold with-underscores">
-            <a class="navigation-link" href="index.html">Каталог</a>
+          <li class="breadcrumbs-item">
+            <span>>></span>
           </li>
-          <li class="signature bold">
-            <a class="navigation-link" href="index.html">Сливочное</a>
+          <li  class="breadcrumbs-item">
+            <a class="link" href="index.html">
+              <span class="signature bold with-underscores">Каталог</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <span>>></span>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="link" href="index.html">
+              <span class="signature bold">Сливочное</span>
+            </a>
           </li>
         </ul>
       </header>
 
-      <div class="catalog-product">
-        <h2 class="heading-two">Сливочное мороженое</h2>
-        <form class="catalog-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="product-filter">
+        <h2 class="heading-two catalog-title">Сливочное мороженое</h2>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="catalog-filter">
             <div class="catalog-form-group">
               <label class="signature" for="select-sort">Сортировка:</label>
@@ -123,9 +144,9 @@
         </form>
       </div>
 
-      <section class="products">
+      <section class="products-catalog">
         <ul class="product-list zeroing-out-list">
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link  without-underscores" href="#">
               <img class="product-img" src="images/catalog/raspberry.png" width="168" height="168" alt="Мороженое Малинка">
               <h3 class="heading-four center">Малинка</h3>
@@ -139,7 +160,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link  without-underscores" href="#">
               <img class="product-img" src="images/catalog/pistachio.png" width="168" height="168" alt="Мороженое Фисташка">
               <h3 class="heading-four center">Фисташка</h3>
@@ -153,7 +174,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/blueberries.png" width="168" height="168" alt="Мороженое Черника">
               <h3 class="heading-four center">Черника</h3>
@@ -167,7 +188,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/bubble-gum.png" width="168" height="168" alt="Мороженое Бабл-гам">
               <h3 class="heading-four center">Бабл-гам</h3>
@@ -181,7 +202,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/blackberry.png"  width="168" height="168" alt="Мороженое Ежевика">
               <h4 class="heading-four center">Ежевика</h4>
@@ -195,7 +216,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/banana.png"  width="168" height="168" alt="Мороженое Банан">
               <h4 class="heading-four center">Банан</h4>
@@ -209,7 +230,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/chocolate-bar.png"  width="168" height="168" alt="Мороженое Шоколадка">
               <h4 class="heading-four center">Шоколадка</h4>
@@ -223,7 +244,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/strawberry.png"  width="168" height="168" alt="Мороженое Клубничка">
               <h4 class="heading-four center">Клубничка</h4>
@@ -237,7 +258,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/lemon.png"  width="168" height="168" alt="Мороженое Лимон">
               <h4 class="heading-four center">Лимон</h4>
@@ -251,7 +272,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/menthol.png"  width="168" height="168" alt="Мороженое Ментол">
               <h4 class="heading-four center">Ментол</h4>
@@ -265,7 +286,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/nut.png"  width="168" height="168" alt="Мороженое Орешек">
               <h4 class="heading-four center">Орешек</h4>
@@ -279,7 +300,7 @@
             </div>
           </li>
 
-          <li class="product-item">
+          <li class="product-item catalog">
             <a class="product-link without-underscores" href="#">
               <img class="product-img" src="images/catalog/creme-brulee.png"  width="168" height="168" alt="Мороженое Крем-брюле">
               <h4 class="heading-four center">Крем-брюле</h4>
@@ -296,7 +317,6 @@
 
         <div class="catalog-wrapper">
           <button class="button" type="button">Показать еще</button>
-
           <ul class="catalog-pagination zeroing-out-list">
             <li class="pagination-item">
               <a class="navigation-link pagination-prev pagination-disabled">
@@ -325,30 +345,29 @@
             </li>
           </ul>
         </div>
-
       </section>
     </main>
 
   <footer class="footer">
-    <ul class="footer-social-list zeroing-out-list">
-      <li class="footer-social-item">
+    <ul class="social-list zeroing-out-list">
+      <li class="social-item">
         <a class="button" href="https://vk.com/htmlacademy" aria-label="ВКонтакте">
           <img src="images/icons/vk.svg" width="24" height="24" alt="ВКонтакте">
         </a>
       </li>
-      <li class="footer-social-item">
+      <li class="social-item">
         <a class="button" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук">
           <img src="images/icons/facebook.svg" width="24" height="24" alt="Фейсбук">
         </a>
       </li>
-      <li class="footer-social-item">
+      <li class="social-item">
         <a class="button" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграмм">
           <img src="images/icons/instagram.svg" width="24" height="24" alt="Инстаграмм">
         </a>
       </li>
     </ul>
 
-    <ul class="footer-suppliers-list zeroing-out-list">
+    <ul class="footer-list zeroing-out-list">
       <div class="suppliers-wrapper">
         <li class="footer-suppliers-item">
           <a class="navigation-link signature bold" href="#">Для поставщиков
@@ -356,12 +375,12 @@
           </a>
         </li>
         <li class="footer-suppliers-item">
-          <a class="navigation-link signature" href="#">Наши документы</a>
+          <a class="signature navigation-link" href="#">О производстве</a>
         </li>
       </div>
       <div class="suppliers-wrapper">
         <li class="footer-suppliers-item">
-          <a class="navigation-link signature" href="#">О производстве</a>
+          <a class="navigation-link signature" href="#">Наши документы</a>
         </li>
         <li class="footer-suppliers-item">
           <a class="navigation-link signature" href="#">Экологические стандарты</a>
@@ -370,7 +389,7 @@
     </ul>
 
     <div class="footer-academy">
-      <a class="button" href="https://htmlacademy.ru/">
+      <a class="navigation-link" href="https://htmlacademy.ru/">
         <img class="footer-academy-logo" src="images/logo-html-academy.svg" width="93" height="27" alt="Логотип академии">
       </a>
       <div class="signature-two">Сделано в <u>.html academy</u> © 2021</div>
