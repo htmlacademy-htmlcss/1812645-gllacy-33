@@ -49,7 +49,7 @@ body {
   overflow: hidden;
 }
 
-button {
+.main-button {
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -106,7 +106,7 @@ button {
   height: 32px;
   padding: 8px;
 
-  background-color: #FFCBD8;
+  background-color: #FF2F64;
   border: none;
   border-radius: 26px;
 }
@@ -136,6 +136,15 @@ button {
   font-weight: 400;
   line-height: 20px;
   color: #2D3440;
+}
+
+.text-three-form {
+  font-weight: 400;
+  line-height: 20px;
+  color: #B9B9B9;
+
+  margin: 0;
+  padding: 0;
 }
 
 .text-three-bold {
@@ -179,8 +188,13 @@ button {
 }
 
 .picture_container {
+  display: block;
+
   max-width: 100%;
   height: auto;
+  margin: auto;
+
+  outline: 2px solid rgba(233, 7, 56, 0.5);
 }
 
 /* Pages */
@@ -298,21 +312,20 @@ button {
 }
 
 .slideshow-photo {
-  align-self: center;
+  outline: 2px solid rgb(91, 160, 238);
 }
 
 .slideshow-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 348px 100px 100px;
+  gap: 41px;
   align-items: center;
 
   outline: 2px solid rgba(179, 18, 179, 0.5);
 }
 
 .slideshow-item {
-  width: 100px;
-
-  outline: 2px solid rgba(179, 18, 179, 0.5);
+  outline: 2px solid rgba(18, 93, 179, 0.5);
 }
 
 .slideshow-nav-wrapper {
@@ -334,8 +347,10 @@ button {
 }
 
 .banners-title {
-  width: 443px;
+  display: block;
 
+  width: 443px;
+  margin: 0 auto 56px;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
@@ -355,15 +370,21 @@ button {
 }
 
 .banners-description {
-  padding-left: 40px;
+  padding: 40px 0 40px 40px;
 }
 
-.banners-img {
-  outline: 2px solid rgb(255, 255, 255);
+.banners-subtitle {
+  margin: 0 0 16px;
 }
 
 .banners-text {
   color: #2D3440;
+
+  margin: 0 0 32px;
+}
+
+.banners-img {
+  outline: 2px solid rgb(255, 255, 255);
 }
 
 .products {
@@ -374,22 +395,28 @@ button {
 }
 
 .products-title {
-  width: 527px;
+  display: block;
 
-  margin-top: 0;
-  margin-bottom: 107px;
+  width: 527px;
+  margin: 0 auto 107px;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  column-gap: 30px;
+  row-gap: 91px;
 }
 
 .product-item {
-  width: 270px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 270px;
+
+  box-sizing: border-box;
+  padding: 0 40px 28px;
 
   background-color: #FCFCFC;
   border-radius: 8px;
@@ -401,13 +428,24 @@ button {
   margin-bottom: 0;
 }
 
-.product-list .catalog {
-  margin-top: 91px;
-}
-
 .product-img {
   display: block;
   margin: 0 auto;
+
+  outline: 2px solid rgba(13, 12, 12, 0.5);
+}
+
+.product-title {
+  text-align: center;
+
+  margin: 16px auto 8px;
+
+  outline: 2px solid rgba(13, 12, 12, 0.5);
+}
+
+.product-description {
+  text-align: center;
+  margin: 0 auto 20px;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
 }
@@ -416,9 +454,14 @@ button {
   display: flex;
   justify-content: space-between;
 
-  padding: 0 40px 28px;
+  margin-top: auto;
 
   outline: 2px solid rgba(13, 12, 12, 0.5);
+}
+
+.product-price {
+  margin: 0;
+  align-self: center;
 }
 
 .store {
@@ -487,18 +530,19 @@ button {
   background-image: url("../images/recipe-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 16px;
 }
 
 .new-recipes {
-  margin: 0;
   line-height: 20px;
+
+  margin: 0 0 12px;
 }
 
 .recipe-title {
   width: 304px;
-
-  margin: 12px 0 0 0;
+  margin: 0;
 }
 
 .subscribe {
@@ -526,14 +570,13 @@ button {
 }
 
 .subscribe-description {
-  margin: 0;
+  margin: 0 0 42px;
 }
 
 .subscribe-inputs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 42px;
+  display: grid;
+  grid-template-columns: 332px auto;
+  gap: 24px;
 }
 
 .delivery {
@@ -561,18 +604,14 @@ button {
   margin-bottom: 24px;
 }
 
-.delivery-text {
+.delivery-description-text {
   width: 371px;
   margin: 0;
 }
 
 .delivery-subscription {
-  min-width: 500px;
-  box-sizing: border-box;
-
-  margin-top: 64px;
-  margin-right: 64px;
-  margin-bottom: 64px;
+  width: 500px;
+  margin:  64px  64px  64px 0;
   padding: 40px;
 
   background-color: #FCFCFC;
@@ -582,61 +621,62 @@ button {
   outline: 2px solid rgba(147, 241, 7, 0.5);
 }
 
-.delivery-form-text {
-  margin: 0;
+.delivery-subscription-text {
+  margin: 0 0 32px;
 }
 
 .delivery-form {
   display: flex;
   flex-direction: column;
-  flex-basis: 420px;
-  flex-grow: 1;
-
-  margin-top: 32px;
 }
 
-.subscribe-date-tel {
+.delivery-date-tel {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 117px 1fr;
   column-gap: 16px;
+
+  margin-bottom: 20px;
 
   outline: 2px solid rgba(15, 237, 52, 0.5);
 }
 
-.subscribe-data {
+.delivery-input {
   display: flex;
   flex-direction: column;
+
+  margin: 0;
 
   outline: 2px solid rgba(237, 181, 29, 0.5);
 }
 
-.subscribe-address {
-  display: flex;
-  flex-direction: column;
+.delivery-input-desc {
+  margin-bottom: 8px;
+}
 
-  margin-bottom: 32px;
+.delivery-date {
+  padding: 14px 16px;
 
-  outline: 2px solid rgba(10, 10, 10, 0.5);
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
 }
 
 .subscribe-button {
   text-align: center;
+  margin-top: 32px;
 
-  outline: 2px solid rgba(10, 10, 10, 0.5);
+  outline: 2px solid rgb(234, 228, 56);
 }
 
 .contacts {
-  width: 1090px;
-  margin: 0 auto;
-  padding: 40px;
+  width: 1170px;
+  box-sizing: border-box;
+  padding: 64px;
 
   background-color: #ffffff;
   background-image: url("../images/contacts-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 16px;
-
-  outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
 .contacts-wrapper {
@@ -647,8 +687,6 @@ button {
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   padding: 40px;
-
-  outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
 .contacts-address {
@@ -659,6 +697,7 @@ button {
 }
 
 .address-description {
+  width: 179px;
   margin-bottom: 12px;
 }
 
@@ -693,6 +732,7 @@ button {
 .footer-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   width: 360px;
 }
@@ -708,12 +748,14 @@ button {
 }
 
 /* Страничка каталога */
+.main-catalog {
+  margin-top: 32px;
+}
 
 .breadcrumbs {
   display: flex;
   justify-content: flex-start;
 
-  margin-top: 32px;
   margin-bottom: 16px;
 
   outline: 2px solid rgba(10, 10, 10, 0.5);
@@ -729,17 +771,14 @@ button {
 }
 
 .filter-form {
-  margin: 0 auto;
-  padding-bottom: 8px;
+  margin-bottom: 99px;
 
-  outline: 2px solid rgb(255, 255, 255);
+  outline: 2px solid rgb(213, 21, 21);
 }
 
 .catalog-filter {
   display: flex;
   justify-content: flex-start;
-
-  margin-bottom: 16px;
 
   outline: 2px solid rgba(150, 241, 15, 0.5);
 }
@@ -751,7 +790,7 @@ button {
 }
 
 .products-catalog {
-  margin: 0 auto;
+  outline: 4px solid rgba(4, 134, 226, 0.5);
 }
 
 .catalog-wrapper {
