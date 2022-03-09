@@ -943,12 +943,28 @@ body {
   justify-content: flex-start;
 
   margin-bottom: 16px;
-
-  outline: 2px solid rgba(10, 10, 10, 0.5);
 }
 
 .breadcrumbs-item {
-  padding-right: 8px;
+  position: relative;
+  padding-right: 28px;
+}
+
+.breadcrumbs-item .link{
+  border-bottom: 1.5px solid rgba(45, 52, 64, 1);
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  content: url("../images/icons/chevrons-right.svg");
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .catalog-title {
