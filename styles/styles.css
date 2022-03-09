@@ -154,12 +154,14 @@ body {
 }
 
 .basket-button {
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
-  padding: 9px 8px;
+
+  padding: 7px 5px;
 
   background-color: #FF2F64;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 50%;
 
   cursor: pointer;
@@ -1000,7 +1002,7 @@ body {
   fill: #2D3440;
 }
 
-.pagination-disabled svg {
+.inactive-arrow svg {
   fill: #2D3440;
   opacity: 0.2;
 }
@@ -1021,6 +1023,10 @@ body {
 .current {
   background-color: #FCFCFC;
   border-radius: 50%;
+}
+
+.disabled-pagination {
+  cursor: default;
 }
 
 
