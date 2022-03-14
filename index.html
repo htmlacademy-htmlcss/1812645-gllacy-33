@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Глейси: магазин мороженого</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   </head>
 
   <body>
@@ -20,10 +21,10 @@
               <!-- Popover -->
               <div class="popover-catalog popover-catalog-open">
                 <a class="signature bold catalog-link">Новинки</a>
-                <a class="signature catalog-link" href="#">Сливочное</a>
-                <a class="signature catalog-link" href="#">Щербеты</a>
-                <a class="signature catalog-link" href="#">Фруктовый лед</a>
-                <a class="signature catalog-link" href="#">Мелорин</a>
+                <a class="signature catalog-link" href="catalog.html">Сливочное</a>
+                <a class="signature catalog-link" href="catalog.html">Щербеты</a>
+                <a class="signature catalog-link" href="catalog.html">Фруктовый лед</a>
+                <a class="signature catalog-link" href="catalog.html">Мелорин</a>
               </div>
 
             </li>
@@ -150,7 +151,7 @@
             </ul>
           </li>
 
-          <li class="slideshow">
+          <li class="slideshow slideshow-disabled">
             <div class="slideshow-description">
               <h2 class="slideshow-title">Сливочное мороженое со вкусом банана</h2>
               <p class="slideshow-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день. </p>
@@ -190,7 +191,7 @@
             </ul>
           </li>
 
-          <li class="slideshow">
+          <li class="slideshow slideshow-disabled">
             <div class="slideshow-description">
               <h2 class="slideshow-title">Карамельный пломбир с маршмеллоу</h2>
               <p class="slideshow-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
@@ -428,15 +429,33 @@
             <div class="delivery-date-tel">
               <p class="delivery-input">
                 <label class="delivery-input-desc text-three-bold" for="subscribe-date">Дата</label>
-                <input class="delivery-date text-three-form" type="text" name="subscribe-date" id="subscribe-date" placeholder="01.04.2020" required>
+                <span class="tooltip data">
+                  <button class="tooltip-toggle" type="button" >
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"
+                            fill="#2D3440"/>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text signature">Укажите желаемую дату доставки</span>
+                </span>
+                <input class="delivery-date text-three-form" type="text" name="subscribe-date" id="subscribe-date" disabled placeholder="01.04.2020" required>
               </p>
               <p class="delivery-input">
-                <label class="delivery-input-desc text-three-bold icon" for="subscribe-tel">Телефон</label>
-                <input class="delivery-date text-three-form" type="text" name="subscribe-tel" id="subscribe-tel" placeholder="+7 800 999-00-00" required>
+                <label class="delivery-input-desc text-three-bold" for="subscribe-tel">Телефон</label>
+                <input class="delivery-date text-three-form error" type="text" name="subscribe-tel" id="subscribe-tel" placeholder="+7 800 999-00-00" required>
               </p>
             </div>
             <p class="delivery-input">
               <label class="delivery-input-desc text-three-bold" for="subscribe-address">Адрес</label>
+              <span class="tooltip address">
+                <button class="tooltip-toggle" type="button" >
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"
+                          fill="#2D3440"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text signature">Введите название улицы, дома и квартиры</span>
+              </span>
               <input class="delivery-date text-three-form" type="text" name="subscribe-address" id="subscribe-address" placeholder="ул. Большая Конюшенная, 19/8" required>
             </p>
             <div class="subscribe-button">
